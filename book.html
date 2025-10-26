@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book a Study Room - CMPND</title>
+</head>
+<body>
+    <header>
+        <h1>CMPND Study Room</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="rooms.html">Book</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Book a Study Room</h2>
+        <form action="confirmation.html" method="get">
+            <label>Full Name:<br><input type="text" name="name"></label><br><br>
+            <label>Email:<br><input type="email" name="email"></label><br><br>
+            <label>Phone Number:<br><input type="tel" name="phone"></label><br><br>
+            <label>Room Type:<br>
+                <select name="room">
+                    <option>Common Area - $3/hr</option>
+                    <option>Quiet Room - $6/hr</option>
+                    <option>Conference Room - $10/hr</option>
+                </select>
+            </label><br><br>
+            <label>Date:<br><input type="date" name="date"></label><br><br>
+            <label>Time:<br><input type="time" name="time"></label><br><br>
+            <label>Duration (hours):<br><input type="number" name="duration"></label><br><br>
+            <button type="submit">Book Now</button>
+        </form>
+    </main>
+</body>
+</html>
