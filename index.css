@@ -17,3 +17,16 @@ header {
     padding: 10px 0;
     text-align: center;
 }
+button{
+    border:none;
+    padding-bottom: 10px;
+    padding-top:10px;
+    color:white;
+    font-weight:bold;
+    width:200px;
+    margin-bottom:5px;
+    border-radius: 5px;;
+}
+#incrementBtn{
+    background-color:blue;
+}
