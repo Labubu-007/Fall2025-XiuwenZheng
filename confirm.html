@@ -2,39 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Booking Confirmation - CMPND</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMPND Study Room | Booking Confirmation</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 </head>
-<body>
-    <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Rooms</a> |
-            <a href="book.html">Book</a> |
-            <a href="contact.html">Contact</a>
+<body data-page="confirm" class="page-confirm">
+    <header class="site-header">
+        <a class="brand" href="index.html">CMPND Study Room</a>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link" data-nav="about">About</a>
+            <a href="rooms.html" class="nav-link" data-nav="rooms">Room Type</a>
+            <a href="book.html" class="nav-link" data-nav="book">Book</a>
+            <a href="contact.html" class="nav-link" data-nav="contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h2>Booking Confirmation</h2>
-        <p>✅ Your booking has been confirmed!</p>
+        <section class="confirmation">
+            <div class="confirmation__icon" aria-hidden="true">✔</div>
+            <h1>Booking Confirmation</h1>
+            <p class="success-line">Green check mark, your booking has been confirmed!</p>
 
-        <h3>Booking Details</h3>
-        <p>Room: Quiet Room</p>
-        <p>Date: 10/31/2025</p>
-        <p>Time: 10:00 AM - 12:00 PM</p>
-        <p>Confirmation Number: CMPND-10-19-2025</p>
+            <div class="confirmation__details" data-booking-details>
+                <div class="detail-row">
+                    <span>Room Type</span>
+                    <strong data-detail="roomType">—</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Date</span>
+                    <strong data-detail="date">—</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Time Period</span>
+                    <strong data-detail="time">—</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Confirmation Number</span>
+                    <strong data-detail="code">CMPND-0000-GUEST</strong>
+                </div>
+            </div>
+            <p class="missing-info" data-missing>We couldn’t find your booking details. Please start a new booking.</p>
 
-        <h3>Important Notes:</h3>
-        <ul>
-            <li>Please arrive 5 minutes before your selected time.</li>
-            <li>Please bring your confirmation details.</li>
-        </ul>
+            <section class="notes">
+                <h2>Important Notes</h2>
+                <ul>
+                    <li>Please arrive 5 minutes before your booking time.</li>
+                    <li>Please use your confirmation code to unlock the door for our study room.</li>
+                </ul>
+            </section>
 
-        <a href="book.html">Book Again</a>
+            <button type="button" data-role="book-button" data-label="Book Again" data-target="book.html"></button>
+        </section>
     </main>
 
-    <script scr="index.js"></script>
-
+    <footer class="site-footer">
+        <p>&copy; <span data-year></span> CMPND Study Room · Jersey City, NJ</p>
+    </footer>
 </body>
 </html>

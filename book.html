@@ -2,40 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Book a Study Room - CMPND</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMPND Study Room | Book</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 </head>
-<body>
-    <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Rooms</a> |
-            <a href="book.html">Book</a> |
-            <a href="contact.html">Contact</a>
+<body data-page="book" class="page-book">
+    <header class="site-header">
+        <a class="brand" href="index.html">CMPND Study Room</a>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link" data-nav="about">About</a>
+            <a href="rooms.html" class="nav-link" data-nav="rooms">Room Type</a>
+            <a href="book.html" class="nav-link" data-nav="book">Book</a>
+            <a href="contact.html" class="nav-link" data-nav="contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h2>Book a Study Room</h2>
-        <form action="confirm.html" method="get">
-            <label>Full Name:<br><input type="text" name="name"></label><br><br>
-            <label>Email:<br><input type="email" name="email"></label><br><br>
-            <label>Phone Number:<br><input type="tel" name="phone"></label><br><br>
-            <label>Room Type:<br>
-                <select name="room">
-                    <option>Common Area - $3/hr</option>
-                    <option>Quiet Room - $6/hr</option>
-                    <option>Conference Room - $10/hr</option>
-                </select>
-            </label><br><br>
-            <label>Date:<br><input type="date" name="date"></label><br><br>
-            <label>Time:<br><input type="time" name="time"></label><br><br>
-            <label>Duration (hours):<br><input type="number" name="duration"></label><br><br>
-            <button type="submit">Book Now</button>
-        </form>
+        <section class="page-header">
+            <p class="eyebrow">Plan your session</p>
+            <h1>Book a Study Room</h1>
+            <p>Complete the chart below to continue. Once every field is filled, the Book button unlocks in CMPND blue.</p>
+        </section>
+
+        <section class="booking-layout">
+            <form class="booking-form" action="confirm.html" method="get" data-booking-form>
+                <div class="form-grid">
+                    <label>
+                        Full Name
+                        <input type="text" name="fullName" placeholder="First & Last Name" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="name@email.com" required>
+                    </label>
+                    <label>
+                        Phone Number
+                        <input type="tel" name="phone" placeholder="(201) 555-0123" pattern="[\d\s()+-]{7,}" required>
+                    </label>
+                    <label>
+                        Room Type
+                        <select name="roomType" required>
+                            <option value="" disabled selected>Select a room</option>
+                            <option value="Common Area">Common Area · $3/hr</option>
+                            <option value="Quiet Room">Quiet Room · $6/hr</option>
+                            <option value="Conference Room">Conference Room · $10/hr</option>
+                        </select>
+                    </label>
+                    <label class="date-picker">
+                        Booking Date (MM/DD/YYYY)
+                        <input type="text" name="date" id="booking-date" placeholder="MM/DD/YYYY" readonly required>
+                        <div class="calendar" data-calendar>
+                            <div class="calendar__controls">
+                                <button type="button" data-change="prev-year" aria-label="Previous year">&laquo;</button>
+                                <button type="button" data-change="prev-month" aria-label="Previous month">&lsaquo;</button>
+                                <div class="calendar__label" data-calendar-label></div>
+                                <button type="button" data-change="next-month" aria-label="Next month">&rsaquo;</button>
+                                <button type="button" data-change="next-year" aria-label="Next year">&raquo;</button>
+                            </div>
+                            <div class="calendar__weekdays"></div>
+                            <div class="calendar__grid"></div>
+                        </div>
+                    </label>
+                    <label>
+                        Start Time (24h)
+                        <input type="time" name="startTime" step="900" required>
+                    </label>
+                    <label>
+                        Duration (hours)
+                        <input type="number" name="durationHours" min="1" max="12" step="1" placeholder="e.g. 2" required>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="cta-button" id="bookingSubmit" disabled>
+                        <span>Book</span>
+                    </button>
+                    <p class="helper-text">Need help? Email <a href="mailto:study@cmpnd.com">study@cmpnd.com</a></p>
+                </div>
+            </form>
+
+            <aside class="booking-notes">
+                <h2>Booking Tips</h2>
+                <ul>
+                    <li>Use the arrows on the calendar to move month-by-month or year-by-year.</li>
+                    <li>Choose a start time in military format (for example, 14:00 for 2pm).</li>
+                    <li>Daily maximum stay is 12 hours per confirmation.</li>
+                </ul>
+                <button type="button" data-role="book-button" data-label="View Room Photos" data-target="rooms.html"></button>
+            </aside>
+        </section>
     </main>
 
-   <script scr="index.js"></script>
-
+    <footer class="site-footer">
+        <p>&copy; <span data-year></span> CMPND Study Room · Jersey City, NJ</p>
+    </footer>
 </body>
 </html>

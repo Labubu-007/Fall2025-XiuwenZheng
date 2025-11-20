@@ -2,28 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CMPND Study Room</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMPND Study Room | About</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 </head>
-<body>
-     
-    <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Rooms</a> |
-            <a href="book.html">Book</a> |
-            <a href="contact.html">Contact</a>
+<body data-page="about" class="page-home">
+    <header class="site-header">
+        <a class="brand" href="index.html">CMPND Study Room</a>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link" data-nav="about">About</a>
+            <a href="rooms.html" class="nav-link" data-nav="rooms">Room Type</a>
+            <a href="book.html" class="nav-link" data-nav="book">Book</a>
+            <a href="contact.html" class="nav-link" data-nav="contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h2>Welcome to CMPND Study Rooms!</h2>
-        <p>Find your perfect study environment.</p>
-        <a href="book.html">Book Now</a>
+        <section class="hero">
+            <p class="eyebrow">Welcome to the CMPND Study Rooms!</p>
+            <h1>Find your perfect study environment.</h1>
+            <p class="hero-subtitle">
+                CMPND Study Room offers thoughtfully curated spaces inside CMPND Apartments in Jersey City.
+                Choose from collaborative hubs, quiet retreats, or fully equipped conference rooms with just a few clicks.
+            </p>
+            <div class="hero-actions">
+                <button type="button" data-role="book-button" data-label="Book a Room" data-target="book.html"></button>
+                <button type="button" data-role="book-button" data-label="Explore Room Types" data-variant="ghost" data-target="rooms.html"></button>
+            </div>
+        </section>
+
+        <section class="about-grid">
+            <article>
+                <h2>Why CMPND?</h2>
+                <p>
+                    Every study room comes with ergonomic seating, reliable Wi-Fi, and flexible hourly pricing.
+                    Whether you need collaboration or heads-down focus, CMPND has you covered.
+                </p>
+            </article>
+            <article>
+                <h2>How it Works</h2>
+                <ol>
+                    <li>Explore the room types that suit your workflow.</li>
+                    <li>Select your date, time, and duration on our interactive calendar.</li>
+                    <li>Receive an instant confirmation code to unlock your room.</li>
+                </ol>
+            </article>
+            <article class="cta-card">
+                <h2>Ready to dive in?</h2>
+                <p>Reserve your perfect study environment in less than a minute.</p>
+                <button type="button" data-role="book-button" data-label="Start a Booking" data-target="book.html"></button>
+            </article>
+        </section>
     </main>
-    <button id="incrementBtn" onclick="increment()">Increment</button>
-   <script scr="index.js"></script>
 
-
+    <footer class="site-footer">
+        <p>&copy; <span data-year></span> CMPND Study Room · Jersey City, NJ</p>
+    </footer>
 </body>
 </html>
