@@ -2,45 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Select Room - CMPND Study Room</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Types · CMPND Study Room</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Book</a> |
-            <a href="contact.html">Contact</a>
+    <header class="site-header">
+        <div class="brand">
+            <h1>cmpnd study room</h1>
+            <p class="tagline">focused spaces for every learner</p>
+        </div>
+        <nav class="top-nav" aria-label="Primary">
+            <a class="nav-btn" href="index.html">About</a>
+            <a class="nav-btn" href="rooms.html" aria-current="page">Room Type</a>
+            <a class="nav-btn" href="book.html">Book</a>
+            <a class="nav-btn" href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h2>Select Room Type</h2>
-        <section>
-            <h3>Common Area</h3>
-            <p>Group talks, discussions, collaboration<br>$3/hr</p>
-            <a href="book.html">Book</a>
-        </section>
-        <section>
-            <h3>Quiet Room</h3>
-            <p>Silent study, deep focus<br>$6/hr</p>
-            <a href="book.html">Book</a>
-        </section>
-        <section>
-            <h3>Conference Room</h3>
-            <p>Professional meetings<br>$10/hr</p>
-            <a href="book.html">Book</a>
-        </section>
+        <section class="room-types-grid" aria-label="Room types">
+            <div class="room-card">
+                <h3>Quiet Room</h3>
+                <p>Hourly rate: 2 dollars per hour.</p>
+            </div>
+            <div class="room-card room-card--image">
+                <img src="https://images.unsplash.com/photo-1517586979031-a3addc9d84d2?auto=format&fit=crop&w=900&q=80"
+                     alt="One person studying quietly in a calm room.">
+            </div>
 
-        <h3>Frequently Asked Questions</h3>
-        <p>Where is the study room located?</p>
-        <p>123 Study Ave, Study City</p>
+            <figure class="room-card room-card--image">
+                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80"
+                     alt="Group of students collaborating around a table.">
+                <figcaption>
+                    <h3>Collaboration Room</h3>
+                    <p>Hourly rate is 4 pallors per hour.</p>
+                </figcaption>
+            </figure>
 
-        <p>Cancellation Policy: Cancel 24 hours in advance.</p>
+            <div class="room-card">
+                <p>Pick the environment that matches your study style, then head to the booking page to select a time.</p>
+                <a class="primary-link" href="book.html">Book a room</a>
+            </div>
 
-        <p>Operation Hours: 8 AM - 10 PM daily</p>
+            <div class="room-card room-card--full">
+                <p>Every room includes whiteboards, high-speed Wi‑Fi, and access to the second-floor refreshment bar.</p>
+            </div>
+        </section>
     </main>
-        <script scr="index.js"></script>
-
 </body>
 </html>

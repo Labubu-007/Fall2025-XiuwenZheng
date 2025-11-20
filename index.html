@@ -2,28 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMPND Study Room</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-     
-    <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Rooms</a> |
-            <a href="book.html">Book</a> |
-            <a href="contact.html">Contact</a>
+    <header class="site-header">
+        <div class="brand">
+            <h1>cmpnd study room</h1>
+            <p class="tagline">focused spaces for every learner</p>
+        </div>
+        <nav class="top-nav" aria-label="Primary">
+            <a class="nav-btn" href="index.html" aria-current="page">About</a>
+            <a class="nav-btn" href="rooms.html">Room Type</a>
+            <a class="nav-btn" href="book.html">Book</a>
+            <a class="nav-btn" href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <main>
-        <h2>Welcome to CMPND Study Rooms!</h2>
-        <p>Find your perfect study environment.</p>
-        <a href="book.html">Book Now</a>
+    <main class="about-grid">
+        <section class="about-image" aria-label="Study room photo">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80"
+                 alt="Sunlit study room with a large table, books, and chairs.">
+        </section>
+        <section class="about-text">
+            <h2>About the space</h2>
+            <p>Welcome to the CSS study room. Our study room is located on the second floor of the building. We offer different types of rooms at different rates.</p>
+            <div class="about-cta">
+                <a class="primary-link" href="rooms.html">Explore room types</a>
+                <a class="secondary-link" href="book.html">Reserve a spot</a>
+            </div>
+        </section>
     </main>
-    <button id="incrementBtn" onclick="increment()">Increment</button>
-   <script scr="index.js"></script>
-
-
 </body>
 </html>
