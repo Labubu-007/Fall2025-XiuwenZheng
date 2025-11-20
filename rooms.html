@@ -2,45 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Select Room - CMPND Study Room</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMPND Study Room | Room Types</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 </head>
-<body>
-    <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Book</a> |
-            <a href="contact.html">Contact</a>
+<body data-page="rooms">
+    <header class="site-header">
+        <a class="brand" href="index.html">CMPND Study Room</a>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link" data-nav="about">About</a>
+            <a href="rooms.html" class="nav-link" data-nav="rooms">Room Type</a>
+            <a href="book.html" class="nav-link" data-nav="book">Book</a>
+            <a href="contact.html" class="nav-link" data-nav="contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h2>Select Room Type</h2>
-        <section>
-            <h3>Common Area</h3>
-            <p>Group talks, discussions, collaboration<br>$3/hr</p>
-            <a href="book.html">Book</a>
-        </section>
-        <section>
-            <h3>Quiet Room</h3>
-            <p>Silent study, deep focus<br>$6/hr</p>
-            <a href="book.html">Book</a>
-        </section>
-        <section>
-            <h3>Conference Room</h3>
-            <p>Professional meetings<br>$10/hr</p>
-            <a href="book.html">Book</a>
+        <section class="page-header">
+            <p class="eyebrow">Room Type</p>
+            <h1>Select Room Type</h1>
+            <p>Hover over a room to preview the space, then tap Book to secure your favorite environment.</p>
         </section>
 
-        <h3>Frequently Asked Questions</h3>
-        <p>Where is the study room located?</p>
-        <p>123 Study Ave, Study City</p>
+        <section class="room-gallery">
+            <article class="room-card" data-room-card data-photo="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80">
+                <div class="room-card__layer room-card__layer--content">
+                    <h2>Common Area</h2>
+                    <p>Group talk · Discussion · Collaboration<br><strong>$3 / hour</strong></p>
+                    <button type="button" data-role="book-button" data-label="Book Common Area" data-target="book.html"></button>
+                </div>
+                <div class="room-card__layer room-card__layer--photo"></div>
+            </article>
 
-        <p>Cancellation Policy: Cancel 24 hours in advance.</p>
+            <article class="room-card" data-room-card data-photo="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80">
+                <div class="room-card__layer room-card__layer--content">
+                    <h2>Quiet Room</h2>
+                    <p>Silent study · Deep focus · Individual or pair<br><strong>$6 / hour</strong></p>
+                    <button type="button" data-role="book-button" data-label="Book Quiet Room" data-target="book.html"></button>
+                </div>
+                <div class="room-card__layer room-card__layer--photo"></div>
+            </article>
 
-        <p>Operation Hours: 8 AM - 10 PM daily</p>
+            <article class="room-card" data-room-card data-photo="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80">
+                <div class="room-card__layer room-card__layer--content">
+                    <h2>Conference Room</h2>
+                    <p>Professional meetings · Teamwork up to 10 people<br><strong>$10 / hour</strong></p>
+                    <button type="button" data-role="book-button" data-label="Book Conference Room" data-target="book.html"></button>
+                </div>
+                <div class="room-card__layer room-card__layer--photo"></div>
+            </article>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <article>
+                <h3>1. Where is this study room located?</h3>
+                <p>2nd floor of CMPND Apartments, 666 Newark Ave, Jersey City, NJ 07306.</p>
+            </article>
+            <article>
+                <h3>2. Cancellation policy</h3>
+                <p>Cancel up to 2 hours before your start time for a full refund. Same-day cancellations convert to CMPND credits you can reuse within 30 days.</p>
+            </article>
+            <article>
+                <h3>3. Operation hours</h3>
+                <p>24 hours a day, 7 days a week. Your confirmation code grants access any time.</p>
+            </article>
+            <article>
+                <h3>4. What if I stay overtime?</h3>
+                <p>We automatically extend your booking in 30-minute increments at the same hourly rate, as long as the room is available. Need more time? Just tap your confirmation link to add hours.</p>
+            </article>
+        </section>
     </main>
-        <script scr="index.js"></script>
 
+    <footer class="site-footer">
+        <p>&copy; <span data-year></span> CMPND Study Room · Jersey City, NJ</p>
+    </footer>
 </body>
 </html>

@@ -2,36 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us - CMPND</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMPND Study Room | Contact</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 </head>
-<body>
-    <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Rooms</a> |
-            <a href="book.html">Book</a> |
-            <a href="contact.html">Contact</a>
+<body data-page="contact" class="page-contact">
+    <header class="site-header">
+        <a class="brand" href="index.html">CMPND Study Room</a>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link" data-nav="about">About</a>
+            <a href="rooms.html" class="nav-link" data-nav="rooms">Room Type</a>
+            <a href="book.html" class="nav-link" data-nav="book">Book</a>
+            <a href="contact.html" class="nav-link" data-nav="contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h2>Contact Us</h2>
-        <section>
-            <p><strong>Address:</strong> 123 Study Ave, Study City</p>
-            <p><strong>Phone:</strong> 123-456-7890</p>
-            <p><strong>Email:</strong> info@cmpndstudyroom.com</p>
+        <section class="page-header">
+            <p class="eyebrow">Questions?</p>
+            <h1>Contact CMPND</h1>
+            <p>Send CMPND a message with your name, email, phone number, and any details. Once every field is filled, the Send button turns CMPND blue.</p>
         </section>
 
-        <form>
-            <label>Your Name:<br><input type="text" name="name"></label><br><br>
-            <label>Your Email:<br><input type="email" name="email"></label><br><br>
-            <label>Message:<br><textarea name="message" rows="5"></textarea></label><br><br>
-            <button type="submit">Send Message</button>
-        </form>
+        <section class="contact-layout">
+            <article class="contact-info">
+                <h2>Visit us</h2>
+                <p>2nd floor of CMPND Apartments<br>666 Newark Ave<br>Jersey City, NJ 07306</p>
+                <h2>Call or email</h2>
+                <p>(201) 555-2211<br><a href="mailto:hello@cmpndstudyroom.com">hello@cmpndstudyroom.com</a></p>
+            </article>
+
+            <form class="contact-form" data-contact-form novalidate>
+                <label>
+                    Full Name
+                    <input type="text" name="name" placeholder="Your name" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="you@email.com" required>
+                </label>
+                <label>
+                    Phone Number
+                    <input type="tel" name="phone" placeholder="(201) 555-2211" pattern="[\d\s()+-]{7,}" required>
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+                </label>
+                <button type="submit" class="cta-button" id="contactSubmit" disabled>
+                    <span>Send</span>
+                </button>
+            </form>
+        </section>
     </main>
 
-     <script scr="index.js"></script>
-
+    <footer class="site-footer">
+        <p>&copy; <span data-year></span> CMPND Study Room · Jersey City, NJ</p>
+    </footer>
 </body>
 </html>
