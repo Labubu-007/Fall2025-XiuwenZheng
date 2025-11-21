@@ -2,28 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMPND Study Room</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-     
     <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Rooms</a> |
-            <a href="book.html">Book</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="header-container">
+            <h1 class="logo">CMPND Study Room</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Room Types</a>
+                <a href="book.html">Book</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h2>Welcome to CMPND Study Rooms!</h2>
-        <p>Find your perfect study environment.</p>
-        <a href="book.html">Book Now</a>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to the CMPND Study Rooms!</h2>
+                <p class="subtitle">Find your perfect study environment</p>
+                <button class="book-btn animated-btn" onclick="window.location.href='book.html'">Book Now</button>
+            </div>
+        </section>
     </main>
-    <button id="incrementBtn" onclick="increment()">Increment</button>
-   <script scr="index.js"></script>
 
-
+    <script src="index.js"></script>
 </body>
 </html>

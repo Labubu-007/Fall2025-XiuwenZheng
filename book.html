@@ -2,40 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Study Room - CMPND</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Rooms</a> |
-            <a href="book.html">Book</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="header-container">
+            <h1 class="logo">CMPND Study Room</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Room Types</a>
+                <a href="book.html">Book</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h2>Book a Study Room</h2>
-        <form action="confirm.html" method="get">
-            <label>Full Name:<br><input type="text" name="name"></label><br><br>
-            <label>Email:<br><input type="email" name="email"></label><br><br>
-            <label>Phone Number:<br><input type="tel" name="phone"></label><br><br>
-            <label>Room Type:<br>
-                <select name="room">
-                    <option>Common Area - $3/hr</option>
-                    <option>Quiet Room - $6/hr</option>
-                    <option>Conference Room - $10/hr</option>
-                </select>
-            </label><br><br>
-            <label>Date:<br><input type="date" name="date"></label><br><br>
-            <label>Time:<br><input type="time" name="time"></label><br><br>
-            <label>Duration (hours):<br><input type="number" name="duration"></label><br><br>
-            <button type="submit">Book Now</button>
-        </form>
+        <section class="booking-form">
+            <h2>Book a Study Room</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="roomType">Room Type *</label>
+                    <select id="roomType" name="room" required>
+                        <option value="">Select a room type</option>
+                        <option value="common">Common Area - $3/hr</option>
+                        <option value="quiet">Quiet Room - $6/hr</option>
+                        <option value="conference">Conference Room - $10/hr</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="startTime">Start Time (Military Time) *</label>
+                    <input type="time" id="startTime" name="time" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="duration">Duration (hours) *</label>
+                    <input type="number" id="duration" name="duration" min="1" max="8" required>
+                </div>
+                
+                <button type="submit" class="book-btn" id="submitBtn">Book Now</button>
+            </form>
+        </section>
     </main>
 
-   <script scr="index.js"></script>
-
+    <script src="index.js"></script>
 </body>
 </html>

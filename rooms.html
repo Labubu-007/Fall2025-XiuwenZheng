@@ -2,45 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Select Room - CMPND Study Room</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Types - CMPND Study Room</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <h1>CMPND Study Room</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="rooms.html">Book</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="header-container">
+            <h1 class="logo">CMPND Study Room</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Room Types</a>
+                <a href="book.html">Book</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h2>Select Room Type</h2>
-        <section>
-            <h3>Common Area</h3>
-            <p>Group talks, discussions, collaboration<br>$3/hr</p>
-            <a href="book.html">Book</a>
-        </section>
-        <section>
-            <h3>Quiet Room</h3>
-            <p>Silent study, deep focus<br>$6/hr</p>
-            <a href="book.html">Book</a>
-        </section>
-        <section>
-            <h3>Conference Room</h3>
-            <p>Professional meetings<br>$10/hr</p>
-            <a href="book.html">Book</a>
+        <section class="room-types">
+            <h2>Select Room Type</h2>
+            <div class="rooms-container">
+                <div class="room-card" data-room="common">
+                    <div class="room-front">
+                        <h3>Common Area</h3>
+                        <p>Group talk discussion collaboration<br>$3/hour</p>
+                    </div>
+                    <div class="room-back">
+                        <div class="room-image common-area"></div>
+                        <button class="book-btn room-book-btn" onclick="window.location.href='book.html'">Book</button>
+                    </div>
+                </div>
+                
+                <div class="room-card" data-room="quiet">
+                    <div class="room-front">
+                        <h3>Quiet Room</h3>
+                        <p>Silent study, deep focus<br>Individual or pair<br>$6/hour</p>
+                    </div>
+                    <div class="room-back">
+                        <div class="room-image quiet-room"></div>
+                        <button class="book-btn room-book-btn" onclick="window.location.href='book.html'">Book</button>
+                    </div>
+                </div>
+                
+                <div class="room-card" data-room="conference">
+                    <div class="room-front">
+                        <h3>Conference Room</h3>
+                        <p>Professional meeting, teamwork<br>Up to 10 people<br>$10/hour</p>
+                    </div>
+                    <div class="room-back">
+                        <div class="room-image conference-room"></div>
+                        <button class="book-btn room-book-btn" onclick="window.location.href='book.html'">Book</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <h3>Frequently Asked Questions</h3>
-        <p>Where is the study room located?</p>
-        <p>123 Study Ave, Study City</p>
-
-        <p>Cancellation Policy: Cancel 24 hours in advance.</p>
-
-        <p>Operation Hours: 8 AM - 10 PM daily</p>
+        <section class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>Where is this study room located?</h4>
+                    <p>2nd floor of CMPND apartments, 666 Newark Ave, Jersey City, NJ, 07306</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Cancellation Policy</h4>
+                    <p>You can cancel your booking up to 2 hours before your scheduled time for a full refund. Cancellations made within 2 hours will receive a 50% refund. No-shows will be charged the full amount.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Operation Hours?</h4>
+                    <p>24/7 - Our study rooms are available around the clock to accommodate your study schedule.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if I stay overtime?</h4>
+                    <p>Overtime will be automatically charged at 1.5x the regular rate in 15-minute increments. If the room is not booked after your session, you may extend your stay through the mobile app. Maximum extension is 2 hours.</p>
+                </div>
+            </div>
+        </section>
     </main>
-        <script scr="index.js"></script>
 
+    <script src="index.js"></script>
 </body>
 </html>
